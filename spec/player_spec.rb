@@ -17,9 +17,4 @@ describe Player do
     end
   end
 
-  context 'when trying to create third player' do
-    it 'raises an exception' do
-      expect { described_class.new('Bob')}.to raise_error(an_instance_of(RuntimeError).and having_attributes(message: 'Only two players can be created'))
-    end
-  end
 end 
