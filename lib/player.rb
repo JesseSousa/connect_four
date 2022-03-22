@@ -4,9 +4,9 @@ class Player
   include Circles
 
   attr_accessor :name, :circle 
-  
-  @@players_count = 0
 
+  @@players_count = 0
+  
   def initialize(name)
     if @@players_count == 0 
       @name = name
@@ -14,8 +14,6 @@ class Player
     elsif @@players_count == 1 
       @name = name
       @circle = red_circle
-    else
-      raise "Only two players can be created"
     end
 
     @@players_count += 1
